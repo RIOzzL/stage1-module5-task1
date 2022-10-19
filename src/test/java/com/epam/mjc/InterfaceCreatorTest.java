@@ -82,7 +82,7 @@ public class InterfaceCreatorTest {
                         List.of("222",
                                 "91"),
                         Map.of("222", 3,
-                                "91", 4))
+                                "91", 2))
         );
     }
 
@@ -134,7 +134,7 @@ public class InterfaceCreatorTest {
 
     @ParameterizedTest(name = "biFunction_{0}_Test")
     @MethodSource(value = "biFunctionTestCases")
-    void stringSizeTest(String name,
+    void concatListTest(String name,
                           List<Integer> sourceList1,
                           List<Integer> sourceList2,
                           List<Integer> expected) {
