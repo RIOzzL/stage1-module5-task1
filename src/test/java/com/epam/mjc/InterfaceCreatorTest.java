@@ -132,6 +132,15 @@ public class InterfaceCreatorTest {
         assertEquals(result, expected);
     }
 
+    @ParameterizedTest(name = "function_{0}_Test")
+    @MethodSource(value = "functionTestCases")
+    void concatListTest(String name,
+                        List<String> sourceList,
+                        Map<String, Integer> expected) {
+        Map<String, Integer> result = new InterfaceCreator().stringSize().apply(sourceList);
+        assertEquals(result, expected);
+    }
+
     @ParameterizedTest(name = "biFunction_{0}_Test")
     @MethodSource(value = "biFunctionTestCases")
     void concatListTest(String name,
